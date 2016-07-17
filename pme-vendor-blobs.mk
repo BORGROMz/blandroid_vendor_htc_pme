@@ -23,6 +23,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pme/proprietary/bin/irsc_util:system/bin/irsc_util \
     vendor/htc/pme/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
     vendor/htc/pme/proprietary/bin/msm_irqbalance:system/bin/msm_irqbalance \
+    vendor/htc/pme/proprietary/lib64/libqti-iop.so:system/lib64/libqti-iop.so \
     vendor/htc/pme/proprietary/bin/netmgrd:system/bin/netmgrd \
     vendor/htc/pme/proprietary/bin/pm-proxy:system/bin/pm-proxy \
     vendor/htc/pme/proprietary/bin/pm-service:system/bin/pm-service \
@@ -34,7 +35,9 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pme/proprietary/bin/tftp_server:system/bin/tftp_server \
     vendor/htc/pme/proprietary/bin/thermal-monitor:system/bin/thermal-monitor \
     vendor/htc/pme/proprietary/bin/time_daemon:system/bin/time_daemon \
+    vendor/htc/pme/proprietary/bin/tsdaemon:system/bin/tsdaemon \
     vendor/htc/pme/proprietary/etc/Bluetooth_cal.acdb:system/etc/Bluetooth_cal.acdb \
+    vendor/htc/pme/proprietary/etc/calibration:system/etc/calibration \
     vendor/htc/pme/proprietary/etc/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
     vendor/htc/pme/proprietary/etc/firmware/a225_pm4.fw:system/etc/firmware/a225_pm4.fw \
     vendor/htc/pme/proprietary/etc/firmware/a225p5_pm4.fw:system/etc/firmware/a225p5_pm4.fw \
@@ -58,6 +61,14 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pme/proprietary/etc/firmware/a530v3_gpmu.fw2:system/etc/firmware/a530v3_gpmu.fw2 \
     vendor/htc/pme/proprietary/etc/firmware/a530v3_seq.fw2:system/etc/firmware/a530v3_seq.fw2 \
     vendor/htc/pme/proprietary/etc/firmware/alIAF_InData_4M2M:system/etc/firmware/alIAF_InData_4M2M \
+    vendor/htc/pme/proprietary/vendor/firmware/keymaster/keymaster.b00:system/vendor/firmware/keymaster/keymaster.b00 \
+    vendor/htc/pme/proprietary/vendor/firmware/keymaster/keymaster.b01:system/vendor/firmware/keymaster/keymaster.b01 \
+    vendor/htc/pme/proprietary/vendor/firmware/keymaster/keymaster.b02:system/vendor/firmware/keymaster/keymaster.b02 \
+    vendor/htc/pme/proprietary/vendor/firmware/keymaster/keymaster.b03:system/vendor/firmware/keymaster/keymaster.b03 \
+    vendor/htc/pme/proprietary/vendor/firmware/keymaster/keymaster.b04:system/vendor/firmware/keymaster/keymaster.b04 \
+    vendor/htc/pme/proprietary/vendor/firmware/keymaster/keymaster.b05:system/vendor/firmware/keymaster/keymaster.b05 \
+    vendor/htc/pme/proprietary/vendor/firmware/keymaster/keymaster.b06:system/vendor/firmware/keymaster/keymaster.b06 \
+    vendor/htc/pme/proprietary/vendor/firmware/keymaster/keymaster.mdt:system/vendor/firmware/keymaster/keymaster.mdt \
     vendor/htc/pme/proprietary/etc/firmware/alipay.b00:system/etc/firmware/alipay.b00 \
     vendor/htc/pme/proprietary/etc/firmware/alipay.b01:system/etc/firmware/alipay.b01 \
     vendor/htc/pme/proprietary/etc/firmware/alipay.b02:system/etc/firmware/alipay.b02 \
@@ -180,6 +191,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pme/proprietary/etc/hltof.bin:system/etc/hltof.bin \
     vendor/htc/pme/proprietary/etc/hltrd.bin:system/etc/hltrd.bin \
     vendor/htc/pme/proprietary/etc/Speaker_cal.acdb:system/etc/Speaker_cal.acdb \
+    vendor/htc/pme/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
     vendor/htc/pme/proprietary/lib/hw/camera.msm8996.so:system/lib/hw/camera.msm8996.so \
     vendor/htc/pme/proprietary/lib/hw/fingerprint.msm8996.so:system/lib/hw/fingerprint.msm8996.so \
     vendor/htc/pme/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
@@ -191,6 +203,8 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pme/proprietary/lib/libcameraface.so:system/lib/libcameraface.so \
     vendor/htc/pme/proprietary/lib/libcamerapp.so:system/lib/libcamerapp.so \
     vendor/htc/pme/proprietary/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
+    vendor/htc/pme/proprietary/lib/libdrmframework.so:system/lib/libdrmframework.so \
+    vendor/htc/pme/proprietary/lib/libdrmframework_jni.so:system/lib/libdrmframework_jni.so \
     vendor/htc/pme/proprietary/lib/libgps.utils.so:system/lib/libgps.utils.so \
     vendor/htc/pme/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     vendor/htc/pme/proprietary/lib/libloc_core.so:system/lib/libloc_core.so \
@@ -414,7 +428,26 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pme/proprietary/vendor/lib/libmdtp_crypto.so:system/vendor/lib/libmdtp_crypto.so \
     vendor/htc/pme/proprietary/vendor/lib/libmdtpdemojni.so:system/vendor/lib/libmdtpdemojni.so \
     vendor/htc/pme/proprietary/vendor/lib/libmm-als.so:system/vendor/lib/libmm-als.so \
+    vendor/htc/pme/proprietary/vendor/lib/libmm-disp-apis.so:system/vendor/lib/libmm-disp-apis.so \
     vendor/htc/pme/proprietary/vendor/lib/libmm-color-convertor.so:system/vendor/lib/libmm-color-convertor.so \
+    vendor/htc/pme/proprietary/vendor/lib/libOmxAacDec.so:system/vendor/lib/libOmxAacDec.so \
+    vendor/htc/pme/proprietary/vendor/lib/libOmxAlacDec.so:system/vendor/lib/libOmxAlacDec.so \
+    vendor/htc/pme/proprietary/vendor/lib/libOmxAmrwbplusDec.so:system/vendor/lib/libOmxAmrwbplusDec.so \
+    vendor/htc/pme/proprietary/vendor/lib/libOmxApeDec.so:system/vendor/lib/libOmxApeDec.so \
+    vendor/htc/pme/proprietary/vendor/lib/libOmxEvrcDec.so:system/vendor/lib/libOmxEvrcDec.so \
+    vendor/htc/pme/proprietary/vendor/lib/libOmxQcelp13Dec.so:system/vendor/lib/libOmxQcelp13Dec.so \
+    vendor/htc/pme/proprietary/vendor/lib/libOmxVideoDSMode.so:system/vendor/lib/libOmxVideoDSMode.so \
+    vendor/htc/pme/proprietary/vendor/lib/libOmxWmaDec.so:system/vendor/lib/libOmxWmaDec.so \
+    vendor/htc/pme/proprietary/etc/firmware/venus.b00:system/etc/firmware/venus.b00 \
+    vendor/htc/pme/proprietary/etc/firmware/venus.b01:system/etc/firmware/venus.b01 \
+    vendor/htc/pme/proprietary/etc/firmware/venus.b02:system/etc/firmware/venus.b02 \
+    vendor/htc/pme/proprietary/etc/firmware/venus.b03:system/etc/firmware/venus.b03 \
+    vendor/htc/pme/proprietary/etc/firmware/venus.b04:system/etc/firmware/venus.b04 \
+    vendor/htc/pme/proprietary/etc/firmware/venus.mbn:system/etc/firmware/venus.mbn \
+    vendor/htc/pme/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt \
+    vendor/htc/pme/proprietary/vendor/firmware/libpn548ad_fw.so:system/vendor/firmware/libpn548ad_fw.so \
+    vendor/htc/pme/proprietary/bin/energy-awareness:system/bin/energy-awareness \
+    vendor/htc/pme/proprietary/bin/iop:system/bin/iop \
     vendor/htc/pme/proprietary/vendor/lib/libmm-hdcpmgr.so:system/vendor/lib/libmm-hdcpmgr.so \
     vendor/htc/pme/proprietary/vendor/lib/libmm-qdcm.so:system/vendor/lib/libmm-qdcm.so \
     vendor/htc/pme/proprietary/vendor/lib/libmmcamera2_c2d_module.so:system/vendor/lib/libmmcamera2_c2d_module.so \
@@ -674,6 +707,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pme/proprietary/vendor/lib64/egl/libq3dtools_adreno.so:system/vendor/lib64/egl/libq3dtools_adreno.so \
     vendor/htc/pme/proprietary/vendor/lib64/egl/libq3dtools_esx.so:system/vendor/lib64/egl/libq3dtools_esx.so \
     vendor/htc/pme/proprietary/vendor/lib64/egl/libQTapGLES.so:system/vendor/lib64/egl/libQTapGLES.so \
+    vendor/htc/pme/proprietary/vendor/lib64/libadreno_utils.so:system/vendor/lib64/libadreno_utils.so \
     vendor/htc/pme/proprietary/vendor/lib64/hw/activity_recognition.msm8996.so:system/vendor/lib64/hw/activity_recognition.msm8996.so \
     vendor/htc/pme/proprietary/vendor/lib64/hw/flp.default.so:system/vendor/lib64/hw/flp.default.so \
     vendor/htc/pme/proprietary/vendor/lib64/hw/gatekeeper.msm8996.so:system/vendor/lib64/hw/gatekeeper.msm8996.so \
@@ -779,6 +813,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pme/proprietary/vendor/lib64/libmdtp_crypto.so:system/vendor/lib64/libmdtp_crypto.so \
     vendor/htc/pme/proprietary/vendor/lib64/libmdtpdemojni.so:system/vendor/lib64/libmdtpdemojni.so \
     vendor/htc/pme/proprietary/vendor/lib64/libmm-als.so:system/vendor/lib64/libmm-als.so \
+    vendor/htc/pme/proprietary/vendor/lib64/libmm-disp-apis.so:system/vendor/lib64/libmm-disp-apis.so \
     vendor/htc/pme/proprietary/vendor/lib64/libmm-color-convertor.so:system/vendor/lib64/libmm-color-convertor.so \
     vendor/htc/pme/proprietary/vendor/lib64/libmm-dspp-utils.so:system/vendor/lib64/libmm-dspp-utils.so \
     vendor/htc/pme/proprietary/vendor/lib64/libmm-hdcpmgr.so:system/vendor/lib64/libmm-hdcpmgr.so \
@@ -881,6 +916,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pme/proprietary/vendor/lib64/libwms.so:system/vendor/lib64/libwms.so \
     vendor/htc/pme/proprietary/vendor/lib64/libwqe.so:system/vendor/lib64/libwqe.so \
     vendor/htc/pme/proprietary/vendor/lib64/libxml.so:system/vendor/lib64/libxml.so \
+    vendor/htc/pme/proprietary/lib64/hw/sensors.msm8996.so:system/lib64/hw/sensors.msm8996.so \
     vendor/htc/pme/proprietary/vendor/lib64/libxt_native.so:system/vendor/lib64/libxt_native.so \
     vendor/htc/pme/proprietary/vendor/lib64/libxtadapter.so:system/vendor/lib64/libxtadapter.so \
     vendor/htc/pme/proprietary/vendor/lib64/libxtwifi_ulp_adaptor.so:system/vendor/lib64/libxtwifi_ulp_adaptor.so \
