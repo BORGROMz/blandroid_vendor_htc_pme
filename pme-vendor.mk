@@ -15,9 +15,19 @@
 
 # Pick up overlay for features that depend on non-open-source files
 PRODUCT_PACKAGES += \
+    libloc_api_v02 \
     TimeService \
     libril \
     libtime_genoff \
-    libTimeService
+    libTimeService \
+    libmm-disp-apis \
+    libsdm-disp-apis \
+    ims \
+    CNEService \
+    com.qualcomm.location \
+    org.simalliance.openmobileapi \
+    QtiTetherService \
+    qcnvitems \
+    qcrilhook
 
 $(call inherit-product, vendor/htc/pme/pme-vendor-blobs.mk)
